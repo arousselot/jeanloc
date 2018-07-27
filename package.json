@@ -1,6 +1,9 @@
 {
   "requires": true,
   "lockfileVersion": 1,
+  "scripts":{
+    "start":"node makeRequest.js"
+  },
   "dependencies": {
     "fs": {
       "version": "0.0.1-security",
