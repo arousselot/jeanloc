@@ -63,7 +63,8 @@ function makePostRequest(){
     post_req.write(post_data)
     post_req.end()
 }
-makePostRequest()
+setInterval(makePostRequest,10000)
+// makePostRequest()
 // while (true){
 //     setTimeout(makePostRequest,10);
 // }
