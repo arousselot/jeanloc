@@ -11,7 +11,7 @@ server.listen((process.env.port || 3000),(err) => {
     if (err) {
         return console.log('something bad happened',err)
     }
-    console.log(`server is listening on ${port}`)
+    console.log("server is listening on whtever")
 })
 function makePostRequest(){
     console.log("yo")
