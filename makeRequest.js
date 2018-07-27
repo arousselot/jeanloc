@@ -1,13 +1,13 @@
 var querystring=require('querystring');
 var http=require('http');
 var fs = require('fs');
-const port=process.env.port || 3000
+
 const requestHandler=(request,response) => {
     console.log(request.url)
     response.end('Hello Node.js server')
 }
 const server= http.createServer(requestHandler)
-server.listen(port,(err) => {
+server.listen((process.env.port || 3000),(err) => {
     if (err) {
         return console.log('something bad happened',err)
     }
