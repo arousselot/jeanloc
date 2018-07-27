@@ -1,7 +1,18 @@
 var querystring=require('querystring');
 var http=require('http');
 var fs = require('fs');
-
+const port=3000
+const requestHandler=(request,response) => {
+    console.log(request.url)
+    response.end('Hello Node.js server')
+}
+const server= http.createServer(requestHandler)
+server.listen(port,(err) => {
+    if (err) {
+        return console.log('something bad happened',err)
+    }
+    console.log(`server is listening on ${port}`)
+})
 function makePostRequest(){
     console.log("yo")
     var post_data = querystring.stringify({
