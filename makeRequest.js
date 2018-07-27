@@ -1,7 +1,7 @@
 var querystring=require('querystring');
 var http=require('http');
 var fs = require('fs');
-const port=3000
+const port=process.env.port || 3000
 const requestHandler=(request,response) => {
     console.log(request.url)
     response.end('Hello Node.js server')
